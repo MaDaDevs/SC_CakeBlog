@@ -1,0 +1,101 @@
+2018-03-26 10:36:56 Error: [RuntimeException] Unknown command `cake model`. Run `cake --help` to get the list of valid commands. in /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Console/CommandRunner.php on line 177
+Stack Trace:
+#0 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Console/CommandRunner.php(137): Cake\Console\CommandRunner->getShell(Object(Cake\Console\ConsoleIo), Object(Cake\Console\CommandCollection), 'model')
+#1 /var/www/html/Projets_MVC_Blog/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2018-03-26 10:39:27 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.tags' doesn't exist in /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 131
+Stack Trace:
+#0 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'tags', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('tags', Array)
+#2 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('tags')
+#3 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/ORM/Table.php(653): Cake\ORM\Table->getSchema()
+#4 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'tags', 'Tags')
+#7 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('Tags')
+#8 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/BakeShell.php(272): Bake\Shell\Task\ModelTask->main('Tags')
+#9 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Tags', 0)
+#10 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/BakeShell.php(273): Cake\Collection\Collection->each(Object(Closure))
+#11 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Console/Shell.php(493): Bake\Shell\BakeShell->all('tags')
+#12 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Cake\Console\Shell->runCommand(Array, true)
+#13 /var/www/html/Projets_MVC_Blog/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-03-27 13:25:55 Warning: Warning (512): Association property name "tags" clashes with field of same name of table "articles". You should explicitly specify the "propertyName" option. in [/var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/ORM/Association.php, line 724]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\ORM\Association::getProperty() - CORE/src/ORM/Association.php, line 724
+Bake\Shell\Task\ModelTask::getEntityPropertySchema() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 580
+Bake\Shell\Task\ModelTask::getTableContext() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 136
+Bake\Shell\Task\ModelTask::bake() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 113
+Bake\Shell\Task\ModelTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 100
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 507
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 500
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 141
+[main] - ROOT/bin/cake.php, line 12
+
+
+
+2018-03-27 13:26:15 Warning: Warning (512): Association property name "tags" clashes with field of same name of table "articles". You should explicitly specify the "propertyName" option. in [/var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/ORM/Association.php, line 724]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\ORM\Association::getProperty() - CORE/src/ORM/Association.php, line 724
+Bake\Utility\Model\AssociationFilter::filterAssociations() - ROOT/vendor/cakephp/bake/src/Utility/Model/AssociationFilter.php, line 96
+Bake\Shell\Task\TemplateTask::_filteredAssociations() - ROOT/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php, line 433
+Bake\Shell\Task\TemplateTask::_loadController() - ROOT/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php, line 301
+Bake\Shell\Task\TemplateTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php, line 142
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 507
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 500
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 141
+[main] - ROOT/bin/cake.php, line 12
+
+
+
+2018-03-27 13:54:36 Warning: Warning (512): Association property name "tags" clashes with field of same name of table "articles". You should explicitly specify the "propertyName" option. in [/var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/ORM/Association.php, line 724]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\ORM\Association::getProperty() - CORE/src/ORM/Association.php, line 724
+Bake\Shell\Task\ModelTask::getEntityPropertySchema() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 580
+Bake\Shell\Task\ModelTask::getTableContext() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 136
+Bake\Shell\Task\ModelTask::bake() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 113
+Bake\Shell\Task\ModelTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 100
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 507
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 500
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 141
+[main] - ROOT/bin/cake.php, line 12
+
+
+
+2018-03-30 17:54:03 Error: [Twig_Error_Syntax] Unknown "as_array" filter. in /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Template/Bake/Model/table.twig on line 50
+Stack Trace:
+#0 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/ExpressionParser.php(484): Twig_ExpressionParser->getFilterNodeClass('as_array', 50)
+#1 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/ExpressionParser.php(469): Twig_ExpressionParser->parseFilterExpressionRaw(Object(Twig_Node_Expression_Name))
+#2 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/ExpressionParser.php(323): Twig_ExpressionParser->parseFilterExpression(Object(Twig_Node_Expression_Name))
+#3 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/ExpressionParser.php(215): Twig_ExpressionParser->parsePostfixExpression(Object(Twig_Node_Expression_Name))
+#4 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/ExpressionParser.php(102): Twig_ExpressionParser->parsePrimaryExpression()
+#5 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/ExpressionParser.php(55): Twig_ExpressionParser->getPrimary()
+#6 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/Parser.php(149): Twig_ExpressionParser->parseExpression()
+#7 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/TokenParser/If.php(45): Twig_Parser->subparse(Array)
+#8 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/Parser.php(192): Twig_TokenParser_If->parse(Object(Twig_Token))
+#9 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/TokenParser/If.php(36): Twig_Parser->subparse(Array)
+#10 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/Parser.php(192): Twig_TokenParser_If->parse(Object(Twig_Token))
+#11 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/Parser.php(105): Twig_Parser->subparse(NULL, false)
+#12 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/Environment.php(716): Twig_Parser->parse(Object(Twig_TokenStream))
+#13 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/Environment.php(774): Twig_Environment->parse(Object(Twig_TokenStream))
+#14 /var/www/html/Projets_MVC_Blog/vendor/twig/twig/lib/Twig/Environment.php(452): Twig_Environment->compileSource(Object(Twig_Source))
+#15 /var/www/html/Projets_MVC_Blog/vendor/wyrihaximus/twig-view/src/View/TwigView.php(180): Twig_Environment->loadTemplate('/var/www/html/P...')
+#16 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/View/BakeView.php(146): WyriHaximus\TwigView\View\TwigView->_render('/var/www/html/P...')
+#17 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/Task/BakeTemplateTask.php(89): Bake\View\BakeView->render('Model/table')
+#18 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(956): Bake\Shell\Task\BakeTemplateTask->generate('Model/table')
+#19 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->bakeTable(Object(Cake\ORM\Table), Array)
+#20 /var/www/html/Projets_MVC_Blog/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('ArticlesTags')
+#21 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Console/Shell.php(507): Bake\Shell\Task\ModelTask->main('articles_tags')
+#22 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Console/Shell.php(500): Cake\Console\Shell->runCommand(Array, false, Array)
+#23 /var/www/html/Projets_MVC_Blog/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Cake\Console\Shell->runCommand(Array, true)
+#24 /var/www/html/Projets_MVC_Blog/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#25 {main}
+
+
